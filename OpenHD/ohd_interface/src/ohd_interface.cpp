@@ -52,10 +52,10 @@ std::string exec(const std::string& cmd) {
 // Helper function to check if a Microhard device is present
 bool is_microhard_device_present() {
   if (OHDFilesystemUtil::exists(std::string(getConfigBasePath()) +
-                                 "microhard.txt")
+                                 "microhard.txt"))
     return true;
-  }
-  return false;
+  else
+    return false;
 }
 
 OHDInterface::OHDInterface(OHDProfile profile1)
